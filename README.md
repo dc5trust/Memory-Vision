@@ -1,5 +1,5 @@
 # Memory-Vision
-## The instant classic, a Memory game! This Memory game is limited by a timer and by user moves, that make the game a bit challenging.
+## This Memory game includes a timer and move limits, that make the game a bit challenging. User has a total of 10 moves and 40 seconds to win the match.
 
 ## Link to Web Application
 https://memory-vision.netlify.app
