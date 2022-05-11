@@ -41,7 +41,6 @@ boxContainer.forEach((box)=>{
                 applicationStatus();
                 FirstParentElement = e.target;
                 firstElement = e.target.firstChild;
-                console.log(e.target.classList[1]);
                 //gsap animation, rotate the box element back ( reveal on first click)
                 flipBoxElement(FirstParentElement)
                 firstElement.classList.add('active');
@@ -49,7 +48,6 @@ boxContainer.forEach((box)=>{
             }else if(clickCount === 2 && e.target.classList[1] === undefined){
                 secondElement = e.target.firstChild;
                 if(firstElement.classList[2] === secondElement.classList[2]){
-                    console.log('ERROR - same icon was clicked')
                     return
                 }
                 processing = true;
@@ -97,9 +95,6 @@ function locateMatch (){
     }else{
         gsap.to(FirstParentElement, {transform: 'rotateY(180deg)', duration: .5})
         gsap.to(SecondParentElement, {transform: 'rotateY(180deg)', duration: .5})
-        console.log(firstElement.parent);
-        console.log(secondElement);
-        
         calculateGameMoves();
     }
     revealAllImages();
@@ -111,7 +106,7 @@ function revealAllImages(){
         if(gameMoves === 0 || timerEnded === true){
             boxes.forEach((index)=>{
                 if(index.classList[1] === undefined){
-                    console.log(index);
+                    
                     boxes.forEach((box, index)=>{
                         gsap.fromTo(box, {transform: 'rotateY(0deg)'}, {transform: 'rotateY(180deg)', duration: 1.5});
                         gsap.fromTo(box, {transform: 'rotateY(180deg)'}, {transform: 'rotateY(0deg)', duration: 1.5});
@@ -189,7 +184,6 @@ function firstPageLoad(){
                     
                 }
             }, 170 * (index)); //170
-            console.log('end')
             
         })
         
@@ -224,7 +218,6 @@ function calculateWin (){
             trueCount++;
            
             if (trueCount === 16){
-                console.log('user has won the game');
                 statusB.innerText = `Congratulations, You've won!`;
                 setTimeout(()=>{
                     boxes.forEach((box, index)=>{
