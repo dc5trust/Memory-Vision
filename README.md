@@ -1,8 +1,8 @@
 # Memory-Vision
-## The instant classic, Memory game! This Memory game is limited by a timer and by user moves, that make the game a bit challenging.
+## The instant classic, a Memory game! This Memory game is limited by a timer and by user moves, that make the game a bit challenging.
 
 ## Link to Web Application
-https://word-digest.netlify.app
+https://memory-vision.netlify.app
 
 ## Build With
 <ul>
