@@ -94,7 +94,6 @@ function locateMatch (){
         FirstParentElement.classList.add('match');
         SecondParentElement.classList.add('match');
         calculateWin();
-        //re-add the green color to the matched items *****************************
     }else{
         gsap.to(FirstParentElement, {transform: 'rotateY(180deg)', duration: .5})
         gsap.to(SecondParentElement, {transform: 'rotateY(180deg)', duration: .5})
@@ -113,8 +112,6 @@ function revealAllImages(){
             boxes.forEach((index)=>{
                 if(index.classList[1] === undefined){
                     console.log(index);
-                    // gsap.to(index, {transform: 'none', duration: .5});
-                    // gsap.to(index, {transform: 'rotateY(180deg)', duration: .5});
                     boxes.forEach((box, index)=>{
                         gsap.fromTo(box, {transform: 'rotateY(0deg)'}, {transform: 'rotateY(180deg)', duration: 1.5});
                         gsap.fromTo(box, {transform: 'rotateY(180deg)'}, {transform: 'rotateY(0deg)', duration: 1.5});
@@ -131,8 +128,6 @@ function revealAllImages(){
 
 resetBtn.addEventListener('click', ()=>{
     window.location.reload();    
-    // gsap.fromTo(resetBtn, {transform: 'rotateY(0deg)'}, {transform: 'rotateY(180deg)', duration: 1.5});
-    // gsap.fromTo(resetBtn, {transform: 'rotateY(180deg)'}, {transform: 'rotateY(0deg)', duration: 1.5});
 });
 
 function applicationStatus (){
@@ -156,11 +151,9 @@ function setRandomImages(){
     });
 }   
 
-// setRandomImages();
 firstPageLoad();
 
 function firstPageLoad(){
-    
     //random images 
     processing = true;
     
@@ -252,7 +245,7 @@ function calculateWin (){
 }
 
 
-//if you win, you must stop the time and show some kind of a pop up or something to show that you won! 
+
 
 
     
